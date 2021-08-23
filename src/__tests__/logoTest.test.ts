@@ -16,10 +16,7 @@ const chromedriver = require('chromedriver')
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 const myPage = new HDSpecs(driver)
 
-//allDepartments locators
-//selector//#header > div.grid.isBound > div.grid.flush.hide.show--sm > div > ul > li:nth-child(1) > a
-//xpath//*[@id="header"]/div[1]/div[4]/div/ul/li[1]/a
-//full xpath/html/body/div[1]/div[3]/div[1]/div[4]/div/ul/li[1]/a
+
 const allDepartments: By = By.xpath('//*[@data-id= "departmentsFlyout"]');
 const homeDecor: By = By.xpath('//*[@id= "homeDecorFurniture"]');
 const diyProjects: By = By.xpath('//*[@id= "diyProjectsIdeas"]');
@@ -49,13 +46,3 @@ test('Returning Home After Navigating To Cart Page', async () => {
     await driver.findElement(Logo).click();
 });
 
-//test('Logo/Home button', async () => {
-  //  await driver.navigate();
-    //await driver.findElement(allDepartments).click();
-//    await driver.findElement(Logo).click();
-  //  await driver.findElement(homeDecor).click();
-  //  await driver.findElement(Logo).click();
-  //  await driver.findElement(diyProjects).click();
-  //  await driver.findElement(Logo).click();
-
-//});
