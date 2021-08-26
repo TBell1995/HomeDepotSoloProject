@@ -7,6 +7,7 @@ export class HDSpecs {
     homePage: By = By.xpath('//*[@class= "Header3 Header3-sticky-desktop"]');
     searchBar: By = By.xpath('//*[@class= "SearchBox__input"]');
     searchResults: By = By.xpath('//*[@class= "product-pod--padding"]');
+    results: By = By.xpath('//*[@class= "results-applied__label"]');
 
 
     constructor(driver: WebDriver) {
@@ -37,8 +38,10 @@ async doSearch (searchTerm) {
     let myText = await this.driver.findElement(this.searchResults).getText();
     await this.getSearchResults();
     expect(myText).toContain(`${searchTerm}`);
-    }
-
+}
+async getResults() {
+    return this.getText(this.results);
+}
 
 }
 
