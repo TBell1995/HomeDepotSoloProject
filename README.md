@@ -8,9 +8,10 @@ Testing Manually:
 1. Exploritory Testing
 2. Create an account (protected by reCAPTCHA)
 3. Add to Cart/Checkout
+4. Lists
 
 Testing with Automation
 1. Search-Bar
 2. Logo/Home button
-3. Lists/Favorites
-4. Shop by Brand
+3. Sign-In
+4. Filters
